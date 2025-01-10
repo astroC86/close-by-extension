@@ -1,0 +1,38 @@
+{
+    "name": "close-by-extension",
+    "displayName": "Close Files by Extension",
+    "description": "Close all open files with a specific extension",
+    "version": "0.0.1",
+    "engines": {
+      "vscode": "^1.80.0"
+    },
+    "categories": [
+      "Other"
+    ],
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "contributes": {
+      "commands": [
+        {
+          "command": "close-by-extension.closeFiles",
+          "title": "Close Files by Extension"
+        }
+      ]
+    },
+    "scripts": {
+      "vscode:prepublish": "npm run compile",
+      "compile": "tsc -p ./",
+      "watch": "tsc -watch -p ./",
+      "pretest": "npm run compile && npm run lint",
+      "lint": "eslint src --ext ts"
+    },
+    "devDependencies": {
+      "@types/vscode": "^1.80.0",
+      "@types/node": "^20.x",
+      "@typescript-eslint/eslint-plugin": "^6.x",
+      "@typescript-eslint/parser": "^6.x",
+      "eslint": "^8.x",
+      "typescript": "^5.x"
+    }
+  }
+  
